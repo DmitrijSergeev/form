@@ -1,3 +1,9 @@
+import { Card } from './components/ui/card'
+
 export function App() {
-  return <div>Hello</div>
+  return (
+    <>
+      <Card>This is card</Card>
+    </>
+  )
 }
