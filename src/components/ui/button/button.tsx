@@ -9,6 +9,7 @@ import { PolymorphRef } from '../../../types'
 type Props<T extends ElementType> = {
   asComponent?: T
   fullWidth?: boolean
+  icon?: ReactNode
   variant?: 'link' | 'primary' | 'secondary'
 } & ComponentPropsWithoutRef<T>
 
@@ -18,7 +19,7 @@ type ButtonComponent = <T extends ElementType = 'button'>(
 
 export const Button: ButtonComponent = forwardRef(
   <T extends ElementType = 'button'>(
-    { asComponent, children, className, fullWidth, variant = 'primary', ...rest }: Props<T>,
+    { asComponent, children, className, fullWidth, icon, variant = 'primary', ...rest }: Props<T>,
     ref: ElementRef<T>
   ) => {
     const classNames = clsx(s[variant], fullWidth && s.fullWidth, className, s.button)
@@ -27,6 +28,7 @@ export const Button: ButtonComponent = forwardRef(
 
     return (
       <Component className={classNames} ref={ref} {...rest}>
+        {icon}
         {children}
       </Component>
     )
