@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import s from './card.module.scss'
 
+import { Typography } from '../../ui/typography'
 import { Button } from '../button'
 import { BasicTooltip } from '../tooltip/tooltip'
 
@@ -21,7 +22,9 @@ export const Card = (props: CardProps) => {
 
   return (
     <div className={classNames.root}>
-      <div className={s.container}>Hello</div>
+      <Typography className={s.container} variant={'h1'}>
+        Hello
+      </Typography>
       <Button asComponent={'a'} href={'https://www.google.com/'}>
         THIS IS BUTTON
       </Button>
