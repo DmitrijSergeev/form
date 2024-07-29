@@ -5,9 +5,10 @@ import clsx from 'clsx'
 import s from './card.module.scss'
 
 import { Button } from '../button'
+import { BasicTooltip } from '../tooltip/tooltip'
 
 export type CardProps = {
-  children: ReactNode
+  children?: ReactNode
   className?: string
 }
 
@@ -24,9 +25,11 @@ export const Card = (props: CardProps) => {
       <Button asComponent={'a'} href={'https://www.google.com/'}>
         THIS IS BUTTON
       </Button>
-      <div className={s.container}>
-        <Button variant={'primary'}>THE SECOND ONE</Button>
-      </div>
+      <BasicTooltip>
+        <div className={s.container}>
+          <Button variant={'primary'}>THE SECOND ONE</Button>
+        </div>
+      </BasicTooltip>
     </div>
   )
 }
