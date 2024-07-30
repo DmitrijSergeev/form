@@ -9,7 +9,7 @@ export function App() {
   useEffect(() => {
     Api.getUsers().then(res => {
       setUsers(res.data)
-      console.log(res.data[1])
+      console.log(res.data)
     })
   }, [])
 
