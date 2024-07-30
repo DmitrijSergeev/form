@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { Api } from './api'
-import { Card } from './components/ui/card'
+import { SignIn } from './components/ui/signIn'
 
 export function App() {
   const [users, setUsers] = useState<any>(null)
@@ -15,10 +15,7 @@ export function App() {
 
   return (
     <>
-      <Card>
-        This is card
-        {users}
-      </Card>
+      <SignIn />
     </>
   )
 }

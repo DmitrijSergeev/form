@@ -4,6 +4,7 @@ import clsx from 'clsx'
 
 import s from './card.module.scss'
 
+import { SignIn } from '../../ui/signIn'
 import { Typography } from '../../ui/typography'
 import { Button } from '../button'
 import { BasicTooltip } from '../tooltip/tooltip'
